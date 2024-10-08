@@ -208,7 +208,7 @@ export const networkColors = {
 // TODO: map named colors to new Spore colors
 // TODO: consolidate Spore colors and raw color palette
 
-const sporeLight = {
+/*const sporeLight = {
   sporeWhite: '#FFFFFF',
   sporeBlack: '#000000',
 
@@ -226,8 +226,8 @@ const sporeLight = {
   neutral2: '#7D7D7D',
   neutral3: '#CECECE',
 
-  accent1: '#FC72FF',
-  accent1Hovered: '#C70A92',
+  accent1: '#00BE50',
+  accent1Hovered: '#00BE50',
   accent2: '#FFEFFF',
   accent2Hovered: '#FEEBFC',
   accent3: '#4C82FB',
@@ -238,6 +238,39 @@ const sporeLight = {
   statusActive: '#236EFF',
   statusSuccess: '#40B66B',
   statusSuccess2: '#EEFBF1',
+  statusCritical: '#FF5F52',
+}*/
+
+const sporeLight = {
+  sporeWhite: '#FFFFFF',
+  sporeBlack: '#000000',
+
+  surface1: '#131313',
+  surface1Hovered: '#181818',
+  surface2: '#1B1B1B',
+  surface2Hovered: '#242424',
+  surface3: '#FFFFFF1F', //1F = 12%
+  surface4: '#FFFFFF33', //33 = 20%
+  surface5: '#0000000A', //0A = 4%
+
+  scrim: '#00000099', //99 = 40%
+
+  neutral1: '#FFFFFF',
+  neutral2: '#9B9B9B',
+  neutral3: '#5E5E5E',
+
+  accent1: '#00BE50',
+  accent1Hovered: '#00BE50',
+  accent2: '#311C31',
+  accent2Hovered: '#510D43',
+  accent3: '#4C82FB',
+  accent3Hovered: '#F5F5F5',
+
+  accentSoft: '#FC72FF33', //33 = 20%
+
+  statusActive: '#236EFF',
+  statusSuccess: '#40B66B',
+  statusSuccess2: '#0F2C1A',
   statusCritical: '#FF5F52',
 }
 
@@ -259,8 +292,8 @@ const sporeDark = {
   neutral2: '#9B9B9B',
   neutral3: '#5E5E5E',
 
-  accent1: '#FC72FF',
-  accent1Hovered: '#FD3CFE',
+  accent1: '#00BE50',
+  accent1Hovered: '#00BE50',
   accent2: '#311C31',
   accent2Hovered: '#510D43',
   accent3: '#4C82FB',

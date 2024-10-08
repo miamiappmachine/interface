@@ -79,7 +79,7 @@ export function TDPActionTabs() {
     },
   ]
   return (
-    <Row justify="center" gap="8px">
+    <Row justify="center" gap="8px" marginTop="30px" marginBottom="90px">
       {tabs.map((tab) => (
         <TDPActionPill key={tab.label} onClick={() => toActionLink(tab.href)} $color={tokenColor}>
           {tab.icon}

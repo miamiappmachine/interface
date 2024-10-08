@@ -113,6 +113,13 @@ export const TextFrame = styled(TamaguiText, {
         fontWeight: fonts.body2.fontWeight,
         maxFontSizeMultiplier: fonts.body2.maxFontSizeMultiplier,
       },
+      fugaz: {
+        fontFamily: '$fugaz',
+        fontSize: fonts.heading3.fontSize,
+        lineHeight: fonts.heading3.lineHeight,
+        fontWeight: fonts.heading3.fontWeight,
+        maxFontSizeMultiplier: fonts.heading3.maxFontSizeMultiplier,
+      }
     },
   } as const,
 

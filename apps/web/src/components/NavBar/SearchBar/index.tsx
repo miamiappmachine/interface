@@ -229,6 +229,8 @@ export const SearchBar = ({
 
   const placeholderText = shouldDisableNFTRoutes ? t('common.searchTokens') : t('common.searchTokensNFT')
 
+  console.log("THEME:", theme)
+
   return (
     <Trace section={InterfaceSectionName.NAVBAR_SEARCH}>
       <Anchor $fullScreen={fullScreen}>

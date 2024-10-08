@@ -50,7 +50,7 @@ export const ArrowWrapper = styled.div<{ clickable: boolean }>`
   margin-bottom: -18px;
   margin-left: auto;
   margin-right: auto;
-  background-color: ${({ theme }) => theme.surface2};
+  background-color: ${({ theme }) => theme.accent1};
   border: 4px solid;
   border-color: ${({ theme }) => theme.surface1};
 
@@ -180,7 +180,7 @@ export const ArrowContainer = styled.div`
 
 export const SwapHeaderTabButton = styled(ButtonText)<{ $isActive: boolean }>`
   color: ${({ theme, $isActive }) => ($isActive ? theme.neutral1 : theme.neutral2)};
-  background-color: ${({ theme, $isActive }) => $isActive && theme.surface3};
+  background-color: ${({ theme, $isActive }) => $isActive && theme.accent1};
   padding: 8px 16px;
   border-radius: 20px;
   gap: 4px;

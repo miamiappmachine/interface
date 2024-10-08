@@ -84,32 +84,29 @@ export default function WalletModal({ openSettings }: { openSettings: () => void
         <ThemedText.SubHeader>Connect a wallet</ThemedText.SubHeader>
         <IconButton Icon={Settings} onClick={openSettings} data-testid="wallet-settings" />
       </AutoRow>
-      {showUniswapWalletOptions && (
-        <>
-          <UniswapWalletOptions />
-          <OtherWalletsDividerRow
-            align="center"
-            padding="8px 0px"
-            clickable={isUniExtensionAvailable}
-            onClick={() => isUniExtensionAvailable && toggleShowOtherWallets()}
-          >
-            <Line />
-            <Row align="center" marginX={18}>
-              <Text variant="body3" color="$neutral2" whiteSpace="nowrap">
-                <Trans i18nKey="wallet.other" />
-              </Text>
-              {isUniExtensionAvailable ? showOtherWallets ? <StyledExpandIcon /> : <StyledCollapsedIcon /> : null}
-            </Row>
-            <Line />
-          </OtherWalletsDividerRow>
-        </>
-      )}
       <Column gap="md" flex="1">
         <Row flex="1" align="flex-start">
           <OptionGrid data-testid="option-grid" closed={isUniExtensionAvailable && !showOtherWallets}>
             {connectors.map((c) => (
               <Option connector={c} key={c.uid} />
             ))}
+            {showUniswapWalletOptions && false && (
+            <>
+              <UniswapWalletOptions />
+              {/*<OtherWalletsDividerRow
+                align="center"
+                padding="8px 0px"
+                clickable={isUniExtensionAvailable}
+                onClick={() => isUniExtensionAvailable && toggleShowOtherWallets()}
+              >
+                <Line />
+                <Row align="center" marginX={18}>
+                  {isUniExtensionAvailable ? showOtherWallets ? <StyledExpandIcon /> : <StyledCollapsedIcon /> : null}
+                </Row>
+                <Line />
+              </OtherWalletsDividerRow>*/}
+            </>
+          )}
           </OptionGrid>
         </Row>
         <Column gap="md">

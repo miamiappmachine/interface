@@ -33,89 +33,89 @@ export function getChainUI(chainId: InterfaceChainId, darkMode: boolean): ChainU
     case UniverseChainId.PolygonMumbai:
       return {
         symbol: POLYGON_LOGO,
-        bgColor: '#9558FF33',
-        textColor: '#9558FF',
+        bgColor: '#9558FF',
+        textColor: '#ffffff',
       }
     case UniverseChainId.ArbitrumOne:
     case UniverseChainId.ArbitrumGoerli:
       return {
         symbol: ARBITRUM_LOGO,
-        bgColor: '#00A3FF33',
-        textColor: '#00A3FF',
+        bgColor: '#00A3FF',
+        textColor: '#ffffff',
       }
     case UniverseChainId.Optimism:
     case UniverseChainId.OptimismGoerli:
       return {
         symbol: OPTIMISM_LOGO,
-        bgColor: '#FF042033',
-        textColor: '#FF0420',
+        bgColor: '#FF5C6E',
+        textColor: '#ffffff',
       }
     case UniverseChainId.Celo:
     case UniverseChainId.CeloAlfajores:
       return darkMode
         ? {
             symbol: CELO_LOGO,
-            bgColor: '#FCFF5233',
-            textColor: '#FCFF52',
+            bgColor: '#FEFFA9',
+            textColor: '#000000',
           }
         : {
             symbol: CELO_LOGO,
-            bgColor: '#FCFF5299',
-            textColor: '#655947',
+            bgColor: '#FEFFA9',
+            textColor: '#000000',
           }
     case UniverseChainId.Avalanche:
       return {
         symbol: AVALANCHE_LOGO,
-        bgColor: '#E8414233',
-        textColor: '#E84142',
+        bgColor: '#EB6E6E',
+        textColor: '#ffffff',
       }
     case UniverseChainId.Bnb:
       return {
         symbol: BNB_LOGO,
-        bgColor: '#EAB20033',
-        textColor: '#EAB200',
+        bgColor: '#F1CD5A',
+        textColor: '#000000',
       }
     case UniverseChainId.Base:
       return {
         symbol: BASE_LOGO,
-        bgColor: '#0052FF33',
-        textColor: '#0052FF',
+        bgColor: '#3E7CFF',
+        textColor: '#ffffff',
       }
     case UniverseChainId.Blast:
       return darkMode
         ? {
             symbol: BLAST_LOGO,
-            bgColor: 'rgba(252, 252, 3, 0.12)',
-            textColor: 'rgba(252, 252, 3, 1) ',
+            bgColor: 'rgba(252, 252, 3, 1)',
+            textColor: '#000000',
           }
         : {
             symbol: BLAST_LOGO,
-            bgColor: 'rgba(252, 252, 3, 0.16)',
-            textColor: 'rgba(17, 20, 12, 1)',
+            bgColor: 'rgba(252, 252, 3, 1)',
+            textColor: '#000000',
           }
     case UniverseChainId.Zora:
       return darkMode
         ? {
             symbol: ZORA_LOGO,
-            bgColor: 'rgba(174, 180, 255, 0.08)',
-            textColor: '#AEB4FF',
+            bgColor: 'rgba(174, 180, 255, 1)',
+            textColor: '#000000',
           }
         : {
             symbol: ZORA_LOGO,
-            bgColor: 'rgba(65, 71, 148, 0.12)',
-            textColor: '#414794',
+            bgColor: 'rgba(65, 71, 148, 1)',
+            textColor: '#000000',
           }
     case UniverseChainId.Zksync:
       return darkMode
         ? {
             symbol: ZKSYNC_LOGO,
-            bgColor: 'rgba(97, 137, 255, 0.12)',
-            textColor: '#6189FF',
+            bgColor: 'rgba(97, 137, 255, 1)',
+            textColor: '#ffffff',
           }
         : {
             symbol: ZKSYNC_LOGO,
-            bgColor: 'rgba(54, 103, 246, 0.12)',
-            textColor: '#3667F6',
+            bgColor: 'rgba(54, 103, 246, 1)',
+            textColor: '#ffffff',
           }
     default:
       return undefined

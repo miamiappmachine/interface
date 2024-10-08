@@ -480,6 +480,8 @@ export function SwapForm({ disableTokenInputs = false, onCurrencyChange }: SwapF
   // @ts-ignore
   const isUsingBlockedExtension = window.ethereum?.['isPocketUniverseZ']
 
+  console.log("FIELD INPUT", currencies[Field.OUTPUT])
+
   return (
     <>
       <TokenSafetyModal

@@ -136,7 +136,7 @@ export function SuggestionRow({
       document.removeEventListener('keydown', keyDownHandler)
     }
   }, [toggleOpen, isHovered, suggestion, navigate, handleClick, path])
-
+  
   return (
     <StyledLink
       to={path}
@@ -166,7 +166,11 @@ export function SuggestionRow({
         <PrimaryContainer>
           <Row gap="xs">
             <PrimaryText lineHeight="24px">{suggestion.name}</PrimaryText>
-            {isToken ? <TokenSafetyIcon warning={warning} /> : suggestion.isVerified && <Verified />}
+            {suggestion?.name !== "BOOST" &&
+              <>
+              {isToken ? <TokenSafetyIcon warning={warning} /> : suggestion.isVerified && <Verified />}
+              </>
+            }
           </Row>
           <ThemedText.SubHeaderSmall lineHeight="20px">
             {isToken ? (

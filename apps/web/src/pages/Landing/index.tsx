@@ -61,9 +61,9 @@ export default function Landing() {
   // Redirect to swap page if user is connected or has been recently
   // The intro query parameter can be used to override this
 
-  if ((account.isConnected || hasRecentConnection) && !queryParams.intro) {
+  //if ((account.isConnected || hasRecentConnection) && !queryParams.intro) {
     return <Navigate to={{ ...location, pathname: '/swap' }} replace />
-  }
+  //}
 
   return (
     <Trace logImpression page={InterfacePageName.LANDING_PAGE}>

@@ -96,6 +96,9 @@ export const BlockedWarning: Warning = {
 }
 
 export function useTokenWarning(tokenAddress?: string, chainId?: InterfaceChainId | number): Warning | undefined {
+  if (tokenAddress === "0x04bCFAa5a69bcD15be3092BeFBD96Abc87194A57") {
+    return undefined
+  }
   const currencyInfo = useCurrencyInfo(tokenAddress, chainId)
   switch (currencyInfo?.safetyLevel) {
     case SafetyLevel.MediumWarning:

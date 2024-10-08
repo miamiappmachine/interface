@@ -410,8 +410,11 @@ export function useInitialCurrencyState(): {
         : parsedCurrencyState.outputCurrencyId,
     [initialInputCurrencyAddress, parsedCurrencyState.outputCurrencyId],
   )
+
+  const mainToken = "0x04bCFAa5a69bcD15be3092BeFBD96Abc87194A57"
+
   const initialInputCurrency = useCurrency(initialInputCurrencyAddress, initialChainId)
-  const initialOutputCurrency = useCurrency(initialOutputCurrencyAddress, initialChainId)
+  const initialOutputCurrency = useCurrency(initialOutputCurrencyAddress === undefined ? mainToken : initialOutputCurrencyAddress, initialChainId)
 
   return { initialInputCurrency, initialOutputCurrency, initialChainId }
 }

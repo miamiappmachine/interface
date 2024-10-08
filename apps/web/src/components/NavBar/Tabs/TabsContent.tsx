@@ -47,7 +47,7 @@ export const useTabsContent = (): TabsSection[] => {
         },
       ]
     : [
-        {
+        /*{
           title: t('common.trade'),
           href: '/swap',
           isActive: pathname.startsWith('/swap') || pathname.startsWith('/limit') || pathname.startsWith('/send'),
@@ -85,8 +85,8 @@ export const useTabsContent = (): TabsSection[] => {
                 ]
               : []),
           ],
-        },
-        {
+        },*/
+        /*{
           title: t('common.explore'),
           href: '/explore',
           isActive: pathname.startsWith('/explore') || pathname.startsWith('/nfts'),
@@ -101,12 +101,12 @@ export const useTabsContent = (): TabsSection[] => {
             },
             { label: t('common.nfts'), quickKey: t(`quickKey.nfts`), href: '/nfts', internal: true },
           ],
-        },
-        {
+        },*/
+        /*{
           title: t('common.pool'),
           href: '/pool',
           isActive: pathname.startsWith('/pool'),
-        },
+        },*/
         ...(!areTabsVisible
           ? [
               {

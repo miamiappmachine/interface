@@ -8,7 +8,7 @@ import { useState } from 'react'
 import { ClickableStyle, ThemedText } from 'theme/components'
 
 const Container = styled.div`
-  width: 100%;
+  max-width: 90vw;
   display: flex;
   flex-direction: column;
 `

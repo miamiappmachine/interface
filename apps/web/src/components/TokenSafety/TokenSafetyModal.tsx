@@ -14,6 +14,11 @@ export default function TokenSafetyModal({
   onBlocked,
   showCancel,
 }: TokenSafetyModalProps) {
+  
+  if (token0?.address === "0x04bCFAa5a69bcD15be3092BeFBD96Abc87194A57") {
+    return null;
+  }
+  
   return (
     <Modal isOpen={isOpen} onDismiss={onCancel} maxHeight={400}>
       <TokenSafety

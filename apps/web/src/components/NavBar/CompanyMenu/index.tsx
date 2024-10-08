@@ -50,29 +50,31 @@ export function CompanyMenu() {
 
   const handleLogoClick = useCallback(() => {
     navigate({
-      pathname: '/',
-      search: '?intro=true',
+      pathname: '/swap',
+      //search: '?intro=true',
     })
   }, [navigate])
   const isTouchDevice = useIsTouchDevice()
 
   return (
+    <a onClick={handleLogoClick}>
+      <Text variant="fugaz" color="$accent1" userSelect="none" lineHeight={0}>
+        BOOSTSWAP
+      </Text>
+    </a>
+  )
+
+  return (
     <Popover ref={popoverRef} placement="bottom" hoverable stayInFrame allowFlip onOpenChange={setIsOpen}>
       <Popover.Trigger>
         <Trigger>
-          <UniIcon onClick={handleLogoClick}>
-            <NavIcon width="48" height="48" data-testid="uniswap-logo" />
-            {isLargeScreen && (
-              <Text variant="subheading1" color="$accent1" userSelect="none">
-                Uniswap
-              </Text>
-            )}
-          </UniIcon>
-          {(isSmallScreen || isTouchDevice) && <Hamburger size={22} color="$neutral2" cursor="pointer" ml="16px" />}
-          <ArrowDown $isActive={isOpen} width="12px" height="12px" />
+          <a onClick={handleLogoClick}>
+            <Text variant="fugaz" color="$accent1" userSelect="none" lineHeight={0}>
+              BOOSTSWAP
+            </Text>
+          </a>
         </Trigger>
       </Popover.Trigger>
-      {isMobileDrawer ? <MobileMenuDrawer isOpen={isOpen} closeMenu={closeMenu} /> : <MenuDropdown close={closeMenu} />}
     </Popover>
   )
 }

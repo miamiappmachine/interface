@@ -30,7 +30,7 @@ export default function TopLevelModals() {
   useAccountRiskCheck(account.address)
   const accountBlocked = Boolean(blockedAccountModalOpen && account.isConnected)
   const shouldShowDevFlags = isDevEnv() || isBetaEnv()
-  const extensionIsLaunched = useFeatureFlag(FeatureFlags.ExtensionLaunch)
+  const extensionIsLaunched = false//useFeatureFlag(FeatureFlags.ExtensionLaunch)
 
   return (
     <>

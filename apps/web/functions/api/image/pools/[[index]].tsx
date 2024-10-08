@@ -29,7 +29,7 @@ function PoolImage({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: '168px 0 0 168px',
-        borderRight: '4px solid #1B1B1B',
+        borderRight: '4px solid #00071b',
         clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
       }}
     >
@@ -54,7 +54,7 @@ function PoolImage({
             backgroundImage: `url(${token0Image})`,
             backgroundSize: '200% 100%',
             borderRadius: '168px 0 0 168px',
-            borderRight: '4px solid #1B1B1B', // Border on the right edge of the first image
+            borderRight: '4px solid #00071b', // Border on the right edge of the first image
             clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', // Clips to the left half
           }}
         />
@@ -70,7 +70,7 @@ function PoolImage({
             backgroundPosition: '100% 0%',
             backgroundSize: '200% 100%',
             borderRadius: '0 168px 168px 0',
-            borderLeft: '4px solid #1B1B1B', // Border on the left edge of the second image
+            borderLeft: '4px solid #00071b', // Border on the left edge of the second image
             clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', // Clips to the right half
           }}
         />
@@ -107,7 +107,7 @@ export const onRequest: PagesFunction = async ({ params, request }) => {
       (
         <div
           style={{
-            backgroundColor: '#1B1B1B',
+            backgroundColor: '#00071b',
             display: 'flex',
             width: '1200px',
             height: '630px',
@@ -116,7 +116,7 @@ export const onRequest: PagesFunction = async ({ params, request }) => {
           <div
             style={{
               display: 'flex',
-              backgroundColor: `#1B1B1B`,
+              backgroundColor: `#00071b`,
               alignItems: 'center',
               height: '100%',
               padding: '96px',

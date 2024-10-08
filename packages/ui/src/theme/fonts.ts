@@ -135,6 +135,13 @@ export const fonts = {
     lineHeight: 20,
     maxFontSizeMultiplier: 1.2,
   },
+  fugaz: {
+    family: platformFontFamily('fugaz'),
+    fontSize: adjustedSize(24),
+    lineHeight: 32,
+    fontWeight: BOOK_WEIGHT,
+    maxFontSizeMultiplier: 1.4,
+  }
 } as const
 
 const baselMedium = isWeb
@@ -144,6 +151,8 @@ const baselMedium = isWeb
 const baselBook = isWeb
   ? 'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
   : 'Basel-Book'
+
+const fugaz = '"Fugaz One", sans-serif'
 
 export const headingFont = createFont({
   family: baselBook,
@@ -239,9 +248,30 @@ export const buttonFont = createFont({
 
 // TODO mono font
 
+export const fugazFont = createFont({
+  family: fugaz,
+  face: {},
+  size: {
+    small: fonts.subheading2.fontSize,
+    large: fonts.subheading1.fontSize,
+    true: fonts.subheading1.fontSize,
+  },
+  weight: {
+    book: '400',
+    medium: '500',
+    true: fonts.subheading1.fontWeight,
+  },
+  lineHeight: {
+    small: fonts.subheading2.lineHeight,
+    large: fonts.subheading1.lineHeight,
+    true: fonts.subheading1.lineHeight,
+  },
+})
+
 export const allFonts = {
   heading: headingFont,
   subHeading: subHeadingFont,
   body: bodyFont,
   button: buttonFont,
+  fugaz: fugazFont
 }

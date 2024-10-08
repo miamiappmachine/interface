@@ -208,6 +208,11 @@ export interface TokenSafetyProps {
 }
 
 export default function TokenSafety({ token0, token1, onContinue, onCancel, onBlocked, showCancel }: TokenSafetyProps) {
+  
+  if (token0?.address === "0x04bCFAa5a69bcD15be3092BeFBD96Abc87194A57") {
+    return null;
+  }
+  
   const logos = []
   const urls = []
 

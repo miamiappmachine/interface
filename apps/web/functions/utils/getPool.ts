@@ -38,7 +38,7 @@ export default async function getPool(networkName: string, poolAddress: string, 
   const token0 = data?.token0
   const token1 = data?.token1
   const name = `${token0?.symbol}/${token1?.symbol}`
-  const title = `${name} on Uniswap`
+  const title = `${name} on Boostswap`
 
   const formattedAsset: Data = {
     title,

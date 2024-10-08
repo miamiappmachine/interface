@@ -22,6 +22,7 @@ import { Unitag } from 'ui/src/components/icons'
 import Trace from 'uniswap/src/features/telemetry/Trace'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { isIFramed } from 'utils/isIFramed'
+import { ConnectIcon } from './ConnectIcon'
 
 // https://stackoverflow.com/a/31617326
 const FULL_BORDER_RADIUS = 9999
@@ -207,7 +208,7 @@ function Web3StatusInner() {
           ref={ref}
         >
           <StyledConnectButton tabIndex={-1} data-testid="navbar-connect-wallet">
-            <Trans i18nKey="common.connect.button" />
+            <ConnectIcon width="14" height="14" />
           </StyledConnectButton>
         </Web3StatusConnectWrapper>
       </Trace>

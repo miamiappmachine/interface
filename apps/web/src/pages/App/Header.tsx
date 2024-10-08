@@ -26,7 +26,7 @@ const Banners = styled.div`
 const NavOnScroll = styled.div<{ $hide: boolean; $transparent?: boolean }>`
   width: 100%;
   transition: transform ${({ theme }) => theme.transition.duration.slow};
-  background-color: ${({ theme, $transparent }) => !$transparent && theme.surface1};
+  background-color: ${({ theme, $transparent }) => !$transparent && theme.surface2};
   border-bottom: ${({ theme, $transparent }) => !$transparent && `1px solid ${theme.surface3}`};
   ${({ $hide, theme }) => $hide && `transform: translateY(-${theme.navHeight}px);`}
 `
@@ -43,10 +43,10 @@ export const Header = memo(function Header() {
 
   return (
     <AppHeader id="AppHeader">
-      <Banners>
+      {/*<Banners>
         {extensionEligible && <MobileAppPromoBanner />}
         {renderUkBanner && <UkBanner />}
-      </Banners>
+      </Banners>*/}
       <NavOnScroll
         $hide={!isExplorePage && !isLegacyNav && scrollDirection === ScrollDirection.DOWN}
         $transparent={isHeaderTransparent}
